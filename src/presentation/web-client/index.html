@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Living World</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <p id="connection-error" role="alert" hidden></p>
+      <header id="header"></header>
+      <main>
+        <section id="graph" aria-label="Orts-Graph"></section>
+        <aside id="side">
+          <div id="follow" aria-label="Beobachtete Person" hidden></div>
+          <div id="events" aria-label="Ereignisse"></div>
+          <div id="detail" aria-label="Auswahl und Detail"></div>
+        </aside>
+      </main>
+      <footer id="footer"></footer>
+    </div>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

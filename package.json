@@ -1,0 +1,30 @@
+{
+  "name": "living-world-simulation-engine",
+  "version": "0.1.0",
+  "description": "Deterministic, agent-based living world simulation engine (PoC).",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "sim": "tsx src/presentation/cli.ts",
+    "sim:interactive": "tsx src/presentation/interactive.ts",
+    "web:build-client": "vite build --config src/presentation/web-client/vite.config.ts",
+    "web": "npm run web:build-client && tsx src/presentation/web/index.ts",
+    "typecheck:web-client": "tsc -p tsconfig.web-client.json"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.4"
+  }
+}
